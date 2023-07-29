@@ -1,642 +1,771 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document2</title>
-    <link rel="stylesheet" href="output.css">
-    <script src="index.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind Training</title>
+  <link rel="stylesheet" href="output.css">
+  <script src="index.js"></script>
 </head>
+
 <body id="toggleDark" class="bg-gray-50">
 
-      <nav class="bg-gray-800 w-screen fixed z-[100]">
-        <div class="mx-auto max-w-7xl px-6">
-          <div class="relative flex h-16 items-center justify-between">
-            <div class=" inset-y-0 left-0 flex items-center sm:hidden">
-                <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 
+  <nav class="bg-gray-800 w-screen fixed z-[100]">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class=" inset-y-0 left-0 flex items-center sm:hidden">
+          <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 
                 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
             <span class="text-2xl"><ion-icon name="menu" onclick="menu(this)"></ion-icon>
-                </span>
-            </button>
-            </div>
-            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div class="flex flex-shrink-0 items-center">
-              <img
-                src="https://tailwindui.com/img/logos/mark.svg?color=cyan&shade=500
-      "
-                alt="Logo"
-                class="block h-8 w-auto"
-              />
-              <h1 class="flex items-center justify-center px-2 text-2xl font-medium text-white">Tailwindcss</h1>
-            </div>
-            <div class="absolute right-0">
+            </span>
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex flex-shrink-0 items-center">
+            <img src="https://tailwindui.com/img/logos/mark.svg?color=cyan&shade=500
+      " alt="Logo" class="block h-8 w-auto" />
+            <h1 class="flex items-center justify-center px-2 text-2xl font-medium text-white">Tailwindcss</h1>
+          </div>
+          <div class="absolute right-0">
             <div class="flex hidden md:block space-x-4">
               <a href="" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white">Home</a>
               <a href="" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white">Testimonials</a>
               <a href="" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white">Price</a>
               <a href="" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white">Projects</a>
             </div>
-            </div>
           </div>
         </div>
-        </div>
+      </div>
+    </div>
 
-        <div id="mobile-menu" class="sm:hidden w-screen fixed bg-gray-800 opacity-0 transition ease-in duration-200">
-            <div class="space-y-1 px-2 pt-2 pb-3">
-                <a href="javascipt:void(0)" onclick="toHome()" class="rounded-md bg-gray-900 px-3 py-2 font-medium text-white block text-base">Home</a>
-                <a href="javascipt:void(0)" onclick="toTestimonials()" class="rounded-md hover:bg-gray-700 px-3 py-2 font-medium hover:text-white text-gray-300 block text-base">Testimonials</a>
-                <a href="javascipt:void(0)" onclick="toPrice()" class="rounded-md hover:bg-gray-700 px-3 py-2 font-medium hover:text-white text-gray-300 block text-base">Price</a>
-                <a href="javascipt:void(0)" onclick="toProjects()" class="rounded-md hover:bg-gray-700 px-3 py-2 font-medium hover:text-white text-gray-300 block text-base">Projects</a>
-            </div>
-        </div>
-      </nav>
-      <div class="dark:bg-gray-700 dark:text-white">
-      <main id="Home" class="h-screen bg-[url('https://images.pexels.com/photos/5544048/pexels-photo-5544048.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-cover bg-no-repeat">
-        <div class="relative px-8">
-          <div class="mx-auto max-w-3xl pb-32 pt-48">
-            
-            <h1 class="bg-gradient-to-t from-cyan-500 to-cyan-300 bg-clip-text text-center text-4xl font-bold tracking-tight text-transparent">Data to enrich your online business</h1>
-            <p class="mt-6 text-center text-lg leading-8 text-gray-600 dark:text-gray-800">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-            <div class="mt-8 flex justify-center gap-x-4">
-              <a href="" class="inline-block rounded-lg bg-cyan-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-cyan-600">Learn more</a>
-            </div>
-          </div>
-        </div>
-      </main>
-      <div class="bg-white py-24 sm:py-32 dark:bg-gray-700 ">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl lg:text-center">
-            <div class="text-center text-3xl mb-10 text-gray-500 cursor-pointer">
-              <ion-icon name="moon-outline" onclick="toggleMode(this)"></ion-icon>
-            </div>
-            <h2 class="text-base font-semibold leading-7 text-indigo-600">Deploy faster</h2>
-            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Everything you need to deploy your app</p>
-            <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-white">Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc.</p>
-          </div>
-          <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-              <div class="relative pl-16">
-                <dt class="text-base font-semibold leading-7 text-gray-900">
-                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
-                    </svg>
-                  </div>
-                  Push to deploy
-                </dt>
-                <dd class="mt-2 text-base leading-7 text-gray-600 dark:text-white">Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.</dd>
-              </div>
-              <div class="relative pl-16">
-                <dt class="text-base font-semibold leading-7 text-gray-900">
-                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
-                    </svg>
-                  </div>
-                  SSL certificates
-                </dt>
-                <dd class="mt-2 text-base leading-7 text-gray-600 dark:text-white">Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.</dd>
-              </div>
-              <div class="relative pl-16">
-                <dt class="text-base font-semibold leading-7 text-gray-900">
-                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
-                    </svg>
-                  </div>
-                  Simple queues
-                </dt>
-                <dd class="mt-2 text-base leading-7 text-gray-600 dark:text-white">Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.</dd>
-              </div>
-              <div class="relative pl-16">
-                <dt class="text-base font-semibold leading-7 text-gray-900">
-                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33" />
-                    </svg>
+    <div id="mobile-menu" class="sm:hidden w-screen fixed bg-gray-800 opacity-0 transition ease-in duration-200">
+      <div class="space-y-1 px-2 pt-2 pb-3">
+        <a href="javascipt:void(0)" onclick="toHome()"
+          class="rounded-md bg-gray-900 px-3 py-2 font-medium text-white block text-base">Home</a>
+        <a href="javascipt:void(0)" onclick="toTestimonials()"
+          class="rounded-md hover:bg-gray-700 px-3 py-2 font-medium hover:text-white text-gray-300 block text-base">Testimonials</a>
+        <a href="javascipt:void(0)" onclick="toPrice()"
+          class="rounded-md hover:bg-gray-700 px-3 py-2 font-medium hover:text-white text-gray-300 block text-base">Price</a>
+        <a href="javascipt:void(0)" onclick="toProjects()"
+          class="rounded-md hover:bg-gray-700 px-3 py-2 font-medium hover:text-white text-gray-300 block text-base">Projects</a>
       </div>
-                  Advanced security
-                </dt>
-                <dd class="mt-2 text-base leading-7 text-gray-600 dark:text-white">Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.</dd>
-              </div>
-            </dl>
+    </div>
+  </nav>
+  <div class="dark:bg-gray-700 dark:text-white">
+    <main id="Home"
+      class="h-screen bg-[url('https://images.pexels.com/photos/5544048/pexels-photo-5544048.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-cover bg-no-repeat">
+      <div class="relative px-8">
+        <div class="mx-auto max-w-3xl pb-32 pt-48">
+
+          <h1
+            class="bg-gradient-to-t from-cyan-500 to-cyan-300 bg-clip-text text-center text-4xl font-bold tracking-tight text-transparent">
+            Data to enrich your online business</h1>
+          <p class="mt-6 text-center text-lg leading-8 text-gray-600 dark:text-gray-800">Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+          <div class="mt-8 flex justify-center gap-x-4">
+            <a href=""
+              class="inline-block rounded-lg bg-cyan-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-cyan-600">Learn
+              more</a>
           </div>
         </div>
       </div>
-      
-      <section id="Testimonials" class="mb-20 bg-gray-100 p-20 text-gray-700 dark:bg-gray-700">
-        <div class="mx-auto text-center">
-          <h3 class="mb-6 text-3xl font-bold text-gray-600 dark:text-white">Testimonials</h3>
-          <p class="mb-6 pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </main>
+    <div class="bg-white py-24 sm:py-32 dark:bg-gray-700 ">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:text-center">
+          <div class="text-center text-3xl mb-10 text-gray-500 cursor-pointer">
+            <ion-icon name="moon-outline" onclick="toggleMode(this)"></ion-icon>
+          </div>
+          <h2 class="text-base font-semibold leading-7 text-indigo-600">Deploy faster</h2>
+          <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Everything you need to deploy your
+            app</p>
+          <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-white">Quis tellus eget adipiscing convallis sit sit
+            eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit
+            nunc.</p>
         </div>
-      
-        <div class="grid lg:grid-cols-3 text-center">
-          <div class="mb-12">
-            <div class="justify-center flex mb-6">
-              <img src="https://images.pexels.com/photos/14807470/pexels-photo-14807470.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="w-32 rounded-full shadow-lg " />
+        <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+          <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+            <div class="relative pl-16">
+              <dt class="text-base font-semibold leading-7 text-gray-900">
+                <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
+                  </svg>
+                </div>
+                Push to deploy
+              </dt>
+              <dd class="mt-2 text-base leading-7 text-gray-600 dark:text-white">Morbi viverra dui mi arcu sed. Tellus
+                semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.</dd>
             </div>
-            <h5 class="mb-4 text-xl font-semibold dark:text-white">Juan Carlos</h5>
-            <h6 class="mb-4 font-semibold text-blue-600 dark:text-white">Web developer</h6>
-            <p class="mb-4">
-              
-      <p class="dark:text-white">
-              <svg class="w-6 pr-2 inline-block " role="img"
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fas"
-              data-icon="quote-left" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" fill="#000000" transform="matrix(-1, 0, 0, -1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g id="right_x5F_quote"> <g> <path style="fill:#030104;" d="M0,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H0z"></path> <path style="fill:#030104;" d="M20,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H20z"></path> </g> </g> </g> </g></svg>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
-            </p>
-            <ul class="flex justify-center mb-0 mt-3">
-              <li>
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
-                      <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-        </svg>
-              </li>
-               <li>
-      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
-                      <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-        </svg>
-              </li>
-               <li>
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
-                      <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-        </svg>
-              </li>
-               <li>
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
-                      <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-        </svg>
-              </li>
-               <li>
-                 <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        data-prefix="fas"
-                        data-icon="star-half-alt"
-                        class="w-4 text-yellow-500"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 536 512"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M508.55 171.51L362.18 150.2 296.77 17.81C290.89 5.98 279.42 0 267.95 0c-11.4 0-22.79 5.9-28.69 17.81l-65.43 132.38-146.38 21.29c-26.25 3.8-36.77 36.09-17.74 54.59l105.89 103-25.06 145.48C86.98 495.33 103.57 512 122.15 512c4.93 0 10-1.17 14.87-3.75l130.95-68.68 130.94 68.7c4.86 2.55 9.92 3.71 14.83 3.71 18.6 0 35.22-16.61 31.66-37.4l-25.03-145.49 105.91-102.98c19.04-18.5 8.52-50.8-17.73-54.6zm-121.74 123.2l-18.12 17.62 4.28 24.88 19.52 113.45-102.13-53.59-22.38-11.74.03-317.19 51.03 103.29 11.18 22.63 25.01 3.64 114.23 16.63-82.65 80.38z"
-                        ></path>
-                      </svg>
-              </li>
-            </ul>
-          </div>
-          <div class="mb-12">
-            <div class="justify-center flex mb-6">
-              <img src="https://images.pexels.com/photos/15422042/pexels-photo-15422042/free-photo-of-den-va-tr-ng-th-i-trang-dan-ong-nh-ng-ng-i.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="w-32 rounded-full shadow-lg " />
+            <div class="relative pl-16">
+              <dt class="text-base font-semibold leading-7 text-gray-900">
+                <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                  </svg>
+                </div>
+                SSL certificates
+              </dt>
+              <dd class="mt-2 text-base leading-7 text-gray-600 dark:text-white">Sit quis amet rutrum tellus ullamcorper
+                ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.</dd>
             </div>
-      <h5 class="mb-4 text-xl font-semibold dark:text-white">Johm Smith</h5>
-            <h6 class="mb-4 font-semibold text-blue-600 dark:text-white">Game developer</h6>
-            <p class="mb-4">
-              
-      <p class="dark:text-white">
-              <svg class="w-6 pr-2 inline-block " role="img"
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fas"
-              data-icon="quote-left" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" fill="#000000" transform="matrix(-1, 0, 0, -1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g id="right_x5F_quote"> <g> <path style="fill:#030104;" d="M0,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H0z"></path> <path style="fill:#030104;" d="M20,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H20z"></path> </g> </g> </g> </g></svg>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
-            </p>
-            <ul class="flex justify-center mb-0 mt-3">
-              <li>
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
-                      <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-        </svg>
-              </li>
-               <li>
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
-                      <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-        </svg>
-              </li>
-               <li>
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
-                      <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-        </svg>
-              </li>
-               <li>
-      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
-                      <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-        </svg>
-              </li>
-               <li>
-                 <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        data-prefix="fas"
-                        data-icon="star-half-alt"
-                        class="w-4 text-yellow-500"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 536 512"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M508.55 171.51L362.18 150.2 296.77 17.81C290.89 5.98 279.42 0 267.95 0c-11.4 0-22.79 5.9-28.69 17.81l-65.43 132.38-146.38 21.29c-26.25 3.8-36.77 36.09-17.74 54.59l105.89 103-25.06 145.48C86.98 495.33 103.57 512 122.15 512c4.93 0 10-1.17 14.87-3.75l130.95-68.68 130.94 68.7c4.86 2.55 9.92 3.71 14.83 3.71 18.6 0 35.22-16.61 31.66-37.4l-25.03-145.49 105.91-102.98c19.04-18.5 8.52-50.8-17.73-54.6zm-121.74 123.2l-18.12 17.62 4.28 24.88 19.52 113.45-102.13-53.59-22.38-11.74.03-317.19 51.03 103.29 11.18 22.63 25.01 3.64 114.23 16.63-82.65 80.38z"
-                        ></path>
-                      </svg>
-              </li>
-            </ul>
-          </div>
-          <div class="mb-12">
-            <div class="justify-center flex mb-6">
-              <img src="https://images.pexels.com/photos/16881939/pexels-photo-16881939/free-photo-of-anh-sang-th-i-trang-dan-ong-nh-ng-ng-i.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="w-32 rounded-full shadow-lg " />
+            <div class="relative pl-16">
+              <dt class="text-base font-semibold leading-7 text-gray-900">
+                <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                  </svg>
+                </div>
+                Simple queues
+              </dt>
+              <dd class="mt-2 text-base leading-7 text-gray-600 dark:text-white">Quisque est vel vulputate cursus. Risus
+                proin diam nunc commodo. Lobortis auctor congue commodo diam neque.</dd>
             </div>
-            <h5 class="mb-4 text-xl font-semibold dark:text-white">Juan Carlos</h5>
-            <h6 class="mb-4 font-semibold text-blue-600 dark:text-white">Web developer</h6>
-            <p class="mb-4">
-              
-      <p class="dark:text-white">
-              <svg class="w-6 pr-2 inline-block " role="img"
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fas"
-              data-icon="quote-left" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" fill="#000000" transform="matrix(-1, 0, 0, -1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g id="right_x5F_quote"> <g> <path style="fill:#030104;" d="M0,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H0z"></path> <path style="fill:#030104;" d="M20,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H20z"></path> </g> </g> </g> </g></svg>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
-            </p>
-            <ul class="flex justify-center mb-0 mt-3">
-              <li>
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
-                      <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-        </svg>
-              </li>
-               <li>
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
-                      <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-        </svg>
-              </li>
-               <li>
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
-                      <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-        </svg>
-              </li>
-               <li>
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> 
-                      <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
-        </svg>
-              </li>
-               <li>
-                 <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        data-prefix="fas"
-                        data-icon="star-half-alt"
-                        class="w-4 text-yellow-500"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 536 512"
-                      >
-                        <path
-                          fill="currentColor"
-      d="M508.55 171.51L362.18 150.2 296.77 17.81C290.89 5.98 279.42 0 267.95 0c-11.4 0-22.79 5.9-28.69 17.81l-65.43 132.38-146.38 21.29c-26.25 3.8-36.77 36.09-17.74 54.59l105.89 103-25.06 145.48C86.98 495.33 103.57 512 122.15 512c4.93 0 10-1.17 14.87-3.75l130.95-68.68 130.94 68.7c4.86 2.55 9.92 3.71 14.83 3.71 18.6 0 35.22-16.61 31.66-37.4l-25.03-145.49 105.91-102.98c19.04-18.5 8.52-50.8-17.73-54.6zm-121.74 123.2l-18.12 17.62 4.28 24.88 19.52 113.45-102.13-53.59-22.38-11.74.03-317.19 51.03 103.29 11.18 22.63 25.01 3.64 114.23 16.63-82.65 80.38z"
-                        ></path>
-                      </svg>
-              </li>
-            </ul>
-          </div>
+            <div class="relative pl-16">
+              <dt class="text-base font-semibold leading-7 text-gray-900">
+                <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33" />
+                  </svg>
+                </div>
+                Advanced security
+              </dt>
+              <dd class="mt-2 text-base leading-7 text-gray-600 dark:text-white">Arcu egestas dolor vel iaculis in ipsum
+                mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.</dd>
+            </div>
+          </dl>
         </div>
-        <div id="modal" class="relative z-[100] hidden">
-          <div class="fixed inset-0 bg-gray-500 bg-opacity-75"></div>
-          <div class="fixed inset-0 z-10 overflow-y-auto">
+      </div>
+    </div>
+
+    <section id="Testimonials" class="mb-20 bg-gray-100 p-20 text-gray-700 dark:bg-gray-700">
+      <div class="mx-auto text-center">
+        <h3 class="mb-6 text-3xl font-bold text-gray-600 dark:text-white">Testimonials</h3>
+        <p class="mb-6 pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-3 text-center">
+        <div class="mb-12">
+          <div class="justify-center flex mb-6">
+            <img
+              src="https://images.pexels.com/photos/14807470/pexels-photo-14807470.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="" class="w-32 rounded-full shadow-lg " />
+          </div>
+          <h5 class="mb-4 text-xl font-semibold dark:text-white">Juan Carlos</h5>
+          <h6 class="mb-4 font-semibold text-blue-600 dark:text-white">Web developer</h6>
+          <p class="mb-4">
+
+          <p class="dark:text-white">
+            <svg class="w-6 pr-2 inline-block " role="img" aria-hidden="true" focusable="false" data-prefix="fas"
+              data-icon="quote-left" height="20px" width="20px" version="1.1" id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"
+              xml:space="preserve" fill="#000000" transform="matrix(-1, 0, 0, -1, 0, 0)">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <g>
+                  <g id="right_x5F_quote">
+                    <g>
+                      <path style="fill:#030104;" d="M0,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H0z"></path>
+                      <path style="fill:#030104;" d="M20,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H20z">
+                      </path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+          </p>
+          </p>
+          <ul class="flex justify-center mb-0 mt-3">
+            <li>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500"
+                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+            </li>
+            <li>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500"
+                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+            </li>
+            <li>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500"
+                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+            </li>
+            <li>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500"
+                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+            </li>
+            <li>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half-alt"
+                class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 536 512">
+                <path fill="currentColor"
+                  d="M508.55 171.51L362.18 150.2 296.77 17.81C290.89 5.98 279.42 0 267.95 0c-11.4 0-22.79 5.9-28.69 17.81l-65.43 132.38-146.38 21.29c-26.25 3.8-36.77 36.09-17.74 54.59l105.89 103-25.06 145.48C86.98 495.33 103.57 512 122.15 512c4.93 0 10-1.17 14.87-3.75l130.95-68.68 130.94 68.7c4.86 2.55 9.92 3.71 14.83 3.71 18.6 0 35.22-16.61 31.66-37.4l-25.03-145.49 105.91-102.98c19.04-18.5 8.52-50.8-17.73-54.6zm-121.74 123.2l-18.12 17.62 4.28 24.88 19.52 113.45-102.13-53.59-22.38-11.74.03-317.19 51.03 103.29 11.18 22.63 25.01 3.64 114.23 16.63-82.65 80.38z">
+                </path>
+              </svg>
+            </li>
+          </ul>
+        </div>
+        <div class="mb-12">
+          <div class="justify-center flex mb-6">
+            <img
+              src="https://images.pexels.com/photos/15422042/pexels-photo-15422042/free-photo-of-den-va-tr-ng-th-i-trang-dan-ong-nh-ng-ng-i.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="" class="w-32 rounded-full shadow-lg " />
+          </div>
+          <h5 class="mb-4 text-xl font-semibold dark:text-white">Johm Smith</h5>
+          <h6 class="mb-4 font-semibold text-blue-600 dark:text-white">Game developer</h6>
+          <p class="mb-4">
+
+          <p class="dark:text-white">
+            <svg class="w-6 pr-2 inline-block " role="img" aria-hidden="true" focusable="false" data-prefix="fas"
+              data-icon="quote-left" height="20px" width="20px" version="1.1" id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"
+              xml:space="preserve" fill="#000000" transform="matrix(-1, 0, 0, -1, 0, 0)">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <g>
+                  <g id="right_x5F_quote">
+                    <g>
+                      <path style="fill:#030104;" d="M0,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H0z"></path>
+                      <path style="fill:#030104;" d="M20,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H20z">
+                      </path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+          </p>
+          </p>
+          <ul class="flex justify-center mb-0 mt-3">
+            <li>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500"
+                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+            </li>
+            <li>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500"
+                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+            </li>
+            <li>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500"
+                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+            </li>
+            <li>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500"
+                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+            </li>
+            <li>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half-alt"
+                class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 536 512">
+                <path fill="currentColor"
+                  d="M508.55 171.51L362.18 150.2 296.77 17.81C290.89 5.98 279.42 0 267.95 0c-11.4 0-22.79 5.9-28.69 17.81l-65.43 132.38-146.38 21.29c-26.25 3.8-36.77 36.09-17.74 54.59l105.89 103-25.06 145.48C86.98 495.33 103.57 512 122.15 512c4.93 0 10-1.17 14.87-3.75l130.95-68.68 130.94 68.7c4.86 2.55 9.92 3.71 14.83 3.71 18.6 0 35.22-16.61 31.66-37.4l-25.03-145.49 105.91-102.98c19.04-18.5 8.52-50.8-17.73-54.6zm-121.74 123.2l-18.12 17.62 4.28 24.88 19.52 113.45-102.13-53.59-22.38-11.74.03-317.19 51.03 103.29 11.18 22.63 25.01 3.64 114.23 16.63-82.65 80.38z">
+                </path>
+              </svg>
+            </li>
+          </ul>
+        </div>
+        <div class="mb-12">
+          <div class="justify-center flex mb-6">
+            <img
+              src="https://images.pexels.com/photos/16881939/pexels-photo-16881939/free-photo-of-anh-sang-th-i-trang-dan-ong-nh-ng-ng-i.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="" class="w-32 rounded-full shadow-lg " />
+          </div>
+          <h5 class="mb-4 text-xl font-semibold dark:text-white">Juan Carlos</h5>
+          <h6 class="mb-4 font-semibold text-blue-600 dark:text-white">Web developer</h6>
+          <p class="mb-4">
+
+          <p class="dark:text-white">
+            <svg class="w-6 pr-2 inline-block " role="img" aria-hidden="true" focusable="false" data-prefix="fas"
+              data-icon="quote-left" height="20px" width="20px" version="1.1" id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"
+              xml:space="preserve" fill="#000000" transform="matrix(-1, 0, 0, -1, 0, 0)">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <g>
+                  <g id="right_x5F_quote">
+                    <g>
+                      <path style="fill:#030104;" d="M0,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H0z"></path>
+                      <path style="fill:#030104;" d="M20,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H20z">
+                      </path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+          </p>
+          </p>
+          <ul class="flex justify-center mb-0 mt-3">
+            <li>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500"
+                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+            </li>
+            <li>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500"
+                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+            </li>
+            <li>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500"
+                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+            </li>
+            <li>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500"
+                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+            </li>
+            <li>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star-half-alt"
+                class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 536 512">
+                <path fill="currentColor"
+                  d="M508.55 171.51L362.18 150.2 296.77 17.81C290.89 5.98 279.42 0 267.95 0c-11.4 0-22.79 5.9-28.69 17.81l-65.43 132.38-146.38 21.29c-26.25 3.8-36.77 36.09-17.74 54.59l105.89 103-25.06 145.48C86.98 495.33 103.57 512 122.15 512c4.93 0 10-1.17 14.87-3.75l130.95-68.68 130.94 68.7c4.86 2.55 9.92 3.71 14.83 3.71 18.6 0 35.22-16.61 31.66-37.4l-25.03-145.49 105.91-102.98c19.04-18.5 8.52-50.8-17.73-54.6zm-121.74 123.2l-18.12 17.62 4.28 24.88 19.52 113.45-102.13-53.59-22.38-11.74.03-317.19 51.03 103.29 11.18 22.63 25.01 3.64 114.23 16.63-82.65 80.38z">
+                </path>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="modal" class="relative z-[100] hidden">
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75"></div>
+        <div class="fixed inset-0 z-10 overflow-y-auto">
           <div class="flex min-h-full items-end justify-center p-4 text-center">
             <div class="transform overflow-hidden rounded-lg bg-white shadow-xl transition-all relative w-96 h-1/3  ">
-              <img src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="mb-4">
+              <img
+                src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="" class="mb-4">
               <div class="mt-8 text-center">
-      <h3 class="text-2xl font-medium leading-6 text-gray-900 uppercase">Advanced  Features</h3>
-      <div class="mt-8 w-1/2 mx-auto">
-      <ol class="">
-        <li class="mb-4 flex items-center">
-           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                              class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512">
-                              <path fill="currentColor"
-                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                              </path>
-                            </svg> Unlimited updates
-        </li>
-          <li class="mb-4 flex items-center">
-           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                              class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512">
-                              <path fill="currentColor"
-                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                              </path>
-                            </svg> Git repository
-        </li>
-          <li class="mb-4 flex items-center">
-           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                              class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 512 512">
-                              <path fill="currentColor"
-                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                              </path>
-                            </svg> npm installation
-        </li>
-         <li class="mb-4 flex items-center">
-           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                              class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512">
-                              <path fill="currentColor"
-                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                              </path>
-                            </svg> Code examples
-        </li>
-         <li class="mb-4 flex items-center">
-           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                              class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512">
-                              <path fill="currentColor"
-                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                              </path>
-                            </svg> Premium snippets
-        </li>
-      </ol></div>
-            </div>
-            <div class="bg-gray-50 px-4  py-3">
-      <button type="button" class="inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 font-medium text-white shadow-sm">Checkout</button>
-      <button type="button" class="inline-flex mt-3 w-full justify-center rounded-md border border-gray-300 border-transparent bg-white px-4 py-2 font-medium text-base text-gray-700 shadow-sm">Cancel</button>
-      </div>
+                <h3 class="text-2xl font-medium leading-6 text-gray-900 uppercase">Advanced Features</h3>
+                <div class="mt-8 w-1/2 mx-auto">
+                  <ol class="">
+                    <li class="mb-4 flex items-center">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                        class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                        </path>
+                      </svg> Unlimited updates
+                    </li>
+                    <li class="mb-4 flex items-center">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                        class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                        </path>
+                      </svg> Git repository
+                    </li>
+                    <li class="mb-4 flex items-center">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                        class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                        </path>
+                      </svg> npm installation
+                    </li>
+                    <li class="mb-4 flex items-center">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                        class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                        </path>
+                      </svg> Code examples
+                    </li>
+                    <li class="mb-4 flex items-center">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                        class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                        </path>
+                      </svg> Premium snippets
+                    </li>
+                  </ol>
+                </div>
+              </div>
+              <div class="bg-gray-50 px-4  py-3">
+                <button type="button"
+                  class="inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 font-medium text-white shadow-sm">Checkout</button>
+                <button type="button"
+                  class="inline-flex mt-3 w-full justify-center rounded-md border border-gray-300 border-transparent bg-white px-4 py-2 font-medium text-base text-gray-700 shadow-sm">Cancel</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      
-        <section id="Price" class="container my-24 px-6  mx-auto">
-      <div class="mb-32 text-gray-800">
-      <h2 class=" text-3xl font-bold text-center mb-12 dark:text-white">Pricing</h2>
-      <div class="grid lg:grid-cols-3 gap-x-12">
-      <div class="mb-6">
-      <div class="block rounded-lg shadow-lg bg-gray-200 h-full">
-      <div class="p-6 border-b border-gray-300 text-center">
-      <p class="mb-6 font-bold text-2xl">Basic</p>
-      <h3 class="mb-6">
-        <strong>$129</strong>
-        <small class="text-gray-500 text-sm">/year</small>
-      </h3>
-      <button type="button" class="inline-block rounded px-6  py-2.5  text-blue-500 font-medium text-xs leading-tight uppercase hover:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out w-full bg-gray-300">Buy</button>
-      </div>
-      <div class="p-6">
-      <ol class="">
-        <li class="mb-4 flex items-center">
-           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                              class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512">
-                              <path fill="currentColor"
-                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                              </path>
-                            </svg> Unlimited updates
-        </li>
-          <li class="mb-4 flex items-center">
-           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                              class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512">
-                              <path fill="currentColor"
-                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                              </path>
-                            </svg> Git repository
-        </li>
-          <li class="mb-4 flex items-center">
-           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                              class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512">
-                              <path fill="currentColor"
-                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                              </path>
-                            </svg> npm installation
-        </li>
-      </ol>
-      </div>
-      </div>
-      </div>
-      <div class="mb-6">
-      <div class="block rounded-lg shadow-lg bg-gray-200 h-full">
-      <div class="p-6 border-b border-gray-300 text-center">
-      <p class="mb-6 font-bold text-2xl">Advanced</p>
-      <h3 class="mb-6">
-        <strong>$299</strong>
-        <small class="text-gray-500 text-sm">/year</small>
-      </h3>
-      <button type="button" class="inline-block px-6 py-2.5 rounded text-blue-500 font-medium text-xs leading-tight uppercase hover:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out w-full bg-gray-300">Buy</button>
-      </div>
-      <div class="p-6">
-      <ol class="">
-        <li class="mb-4 flex items-center">
-           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                              class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512">
-                              <path fill="currentColor"
-                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                              </path>
-                            </svg> Unlimited updates
-        </li>
-          <li class="mb-4 flex items-center">
-           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                              class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512">
-                              <path fill="currentColor"
-                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                              </path>
-                            </svg> Git repository
-        </li>
-          <li class="mb-4 flex items-center">
-           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                              class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512">
-                              <path fill="currentColor"
-                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                              </path>
-                            </svg> npm installation
-        </li>
-         <li class="mb-4 flex items-center">
-           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                              class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512">
-                              <path fill="currentColor"
-      d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                              </path>
-                            </svg> Code examples
-        </li>
-         <li class="mb-4 flex items-center">
-           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                              class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512">
-                              <path fill="currentColor"
-                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                              </path>
-                            </svg> Premium snippets
-        </li>
-      </ol>
-      </div>
-      </div>
-      </div>
-      <div class="mb-6">
-      <div class="block rounded-lg shadow-lg bg-gray-200 h-full">
-      <div class="p-6 border-b border-gray-300 text-center">
-      <p class="mb-6 font-bold text-2xl">Enterprise</p>
-      <h3 class="mb-6">
-        <strong>$499</strong>
-        <small class="text-gray-500 text-sm">/year</small>
-      </h3>
-      <button type="button" class="inline-block px-6 py-2.5 rounded text-blue-500 font-medium text-xs leading-tight uppercase hover:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out w-full bg-gray-300">Buy</button>
-      </div>
-      <div class="p-6">
-      <ol class="">
-        <li class="mb-4 flex items-center">
-           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                              class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512">
-                              <path fill="currentColor"
-                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                              </path>
-                            </svg> Unlimited updates
-        </li>
-          <li class="mb-4 flex items-center">
-           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                              class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512">
-                              <path fill="currentColor"
-      d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                              </path>
-                            </svg> Git repository
-        </li>
-          <li class="mb-4 flex items-center">
-           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                              class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512">
-                              <path fill="currentColor"
-                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                              </path>
-                            </svg> npm installation
-        </li>
-        <li class="mb-4 flex items-center">
-           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                              class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512">
-                              <path fill="currentColor"
-                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                              </path>
-                            </svg> Code examples
-        </li>
-         <li class="mb-4 flex items-center">
-           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                              class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512">
-                              <path fill="currentColor"
-                                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                              </path>
-                            </svg> Premium snippets
-        </li>
-        <li class="mb-4 flex items-center">
-           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                              class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 512 512">
-                              <path fill="currentColor"
-      d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                              </path>
-                            </svg> Premium support
-        </li>
-      
-      </ol>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-        </section>  
+
+      <section id="Price" class="container my-24 px-6  mx-auto">
+        <div class="mb-32 text-gray-800">
+          <h2 class=" text-3xl font-bold text-center mb-12 dark:text-white">Pricing</h2>
+          <div class="grid lg:grid-cols-3 gap-x-12">
+            <div class="mb-6">
+              <div class="block rounded-lg shadow-lg bg-gray-200 h-full">
+                <div class="p-6 border-b border-gray-300 text-center">
+                  <p class="mb-6 font-bold text-2xl">Basic</p>
+                  <h3 class="mb-6">
+                    <strong>$129</strong>
+                    <small class="text-gray-500 text-sm">/year</small>
+                  </h3>
+                  <button type="button"
+                    class="inline-block rounded px-6  py-2.5  text-blue-500 font-medium text-xs leading-tight uppercase hover:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out w-full bg-gray-300">Buy</button>
+                </div>
+                <div class="p-6">
+                  <ol class="">
+                    <li class="mb-4 flex items-center">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                        class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                        </path>
+                      </svg> Unlimited updates
+                    </li>
+                    <li class="mb-4 flex items-center">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                        class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                        </path>
+                      </svg> Git repository
+                    </li>
+                    <li class="mb-4 flex items-center">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                        class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                        </path>
+                      </svg> npm installation
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <div class="mb-6">
+              <div class="block rounded-lg shadow-lg bg-gray-200 h-full">
+                <div class="p-6 border-b border-gray-300 text-center">
+                  <p class="mb-6 font-bold text-2xl">Advanced</p>
+                  <h3 class="mb-6">
+                    <strong>$299</strong>
+                    <small class="text-gray-500 text-sm">/year</small>
+                  </h3>
+                  <button type="button"
+                    class="inline-block px-6 py-2.5 rounded text-blue-500 font-medium text-xs leading-tight uppercase hover:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out w-full bg-gray-300">Buy</button>
+                </div>
+                <div class="p-6">
+                  <ol class="">
+                    <li class="mb-4 flex items-center">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                        class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                        </path>
+                      </svg> Unlimited updates
+                    </li>
+                    <li class="mb-4 flex items-center">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                        class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                        </path>
+                      </svg> Git repository
+                    </li>
+                    <li class="mb-4 flex items-center">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                        class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                        </path>
+                      </svg> npm installation
+                    </li>
+                    <li class="mb-4 flex items-center">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                        class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                        </path>
+                      </svg> Code examples
+                    </li>
+                    <li class="mb-4 flex items-center">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                        class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                        </path>
+                      </svg> Premium snippets
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <div class="mb-6">
+              <div class="block rounded-lg shadow-lg bg-gray-200 h-full">
+                <div class="p-6 border-b border-gray-300 text-center">
+                  <p class="mb-6 font-bold text-2xl">Enterprise</p>
+                  <h3 class="mb-6">
+                    <strong>$499</strong>
+                    <small class="text-gray-500 text-sm">/year</small>
+                  </h3>
+                  <button type="button"
+                    class="inline-block px-6 py-2.5 rounded text-blue-500 font-medium text-xs leading-tight uppercase hover:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out w-full bg-gray-300">Buy</button>
+                </div>
+                <div class="p-6">
+                  <ol class="">
+                    <li class="mb-4 flex items-center">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                        class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                        </path>
+                      </svg> Unlimited updates
+                    </li>
+                    <li class="mb-4 flex items-center">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                        class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                        </path>
+                      </svg> Git repository
+                    </li>
+                    <li class="mb-4 flex items-center">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                        class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                        </path>
+                      </svg> npm installation
+                    </li>
+                    <li class="mb-4 flex items-center">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                        class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                        </path>
+                      </svg> Code examples
+                    </li>
+                    <li class="mb-4 flex items-center">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                        class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                        </path>
+                      </svg> Premium snippets
+                    </li>
+                    <li class="mb-4 flex items-center">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                        class="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                        </path>
+                      </svg> Premium support
+                    </li>
+
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <section id="Projects" class="overflow-hidden text-gray-700 bg-gray-100 dark:bg-gray-700">
+    </section>
+    <section id="Projects" class="overflow-hidden text-gray-700 bg-gray-100 dark:bg-gray-700">
       <div class="container px-5 py-20 max-auto">
         <div class="text-center max-w-3xl mx-auto">
           <h3 class="text-3xl font-bold mb-6 text-gray-800 dark:text-white">Projects</h3>
-      <p class="mb-6 pb-2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <p class="mb-6 pb-2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo.</p>
         </div>
         <div class="flex flex-wrap">
           <div class="flex flex-wrap w-1/3">
             <div class="w-full p-1">
-                <img src="https://media.istockphoto.com/id/1047259374/vi/anh/n%E1%BB%81n-tr%E1%BB%ABu-t%C6%B0%E1%BB%A3ng-m%C3%A3-ngu%E1%BB%93n-l%E1%BA%ADp-tr%C3%ACnh.jpg?s=2048x2048&w=is&k=20&c=w0mHq4Cdsp965lGRrWdFT-jOW9781alj2A-6XRPgig8=" alt="gallery" class="block object-cover object-center w-full h-auto rounded-lg">
+              <img
+                src="https://media.istockphoto.com/id/1047259374/vi/anh/n%E1%BB%81n-tr%E1%BB%ABu-t%C6%B0%E1%BB%A3ng-m%C3%A3-ngu%E1%BB%93n-l%E1%BA%ADp-tr%C3%ACnh.jpg?s=2048x2048&w=is&k=20&c=w0mHq4Cdsp965lGRrWdFT-jOW9781alj2A-6XRPgig8="
+                alt="gallery" class="block object-cover object-center w-full h-auto rounded-lg">
             </div>
           </div>
           <div class="flex flex-wrap w-1/3">
             <div class="w-full p-1">
-                <img src="https://media.istockphoto.com/id/1075599562/vi/anh/l%E1%BA%ADp-tr%C3%ACnh-vi%C3%AAn-l%C3%A0m-vi%E1%BB%87c-v%E1%BB%9Bi-m%C3%A3-ch%C6%B0%C6%A1ng-tr%C3%ACnh.jpg?s=2048x2048&w=is&k=20&c=FgnU6O5Ch7k4fznw0V_JcF93b46NJ76IyTCBz-HxDbI=" alt="gallery" class="block object-cover object-center w-full h-auto rounded-lg">
+              <img
+                src="https://media.istockphoto.com/id/1075599562/vi/anh/l%E1%BA%ADp-tr%C3%ACnh-vi%C3%AAn-l%C3%A0m-vi%E1%BB%87c-v%E1%BB%9Bi-m%C3%A3-ch%C6%B0%C6%A1ng-tr%C3%ACnh.jpg?s=2048x2048&w=is&k=20&c=FgnU6O5Ch7k4fznw0V_JcF93b46NJ76IyTCBz-HxDbI="
+                alt="gallery" class="block object-cover object-center w-full h-auto rounded-lg">
             </div>
           </div>
           <div class="flex flex-wrap w-1/3">
             <div class="w-full p-1">
-                <img src="https://media.istockphoto.com/id/1255928059/vi/anh/n%E1%BB%AF-l%E1%BA%ADp-tr%C3%ACnh-vi%C3%AAn-tr%E1%BA%BB-da-tr%E1%BA%AFng-%C4%91eo-k%C3%ADnh-vi%E1%BA%BFt-m%C3%A3-ch%C6%B0%C6%A1ng-tr%C3%ACnh-tr%C3%AAn-m%C3%A1y-t%C3%ADnh-x%C3%A1ch-tay.jpg?b=1&s=612x612&w=0&k=20&c=4PSIhf790mm6SZ3o-froWsYyRMwliXrCwHiiKCDLjN8=" alt="gallery" class="block object-cover object-center w-full h-auto rounded-lg">
+              <img
+                src="https://media.istockphoto.com/id/1255928059/vi/anh/n%E1%BB%AF-l%E1%BA%ADp-tr%C3%ACnh-vi%C3%AAn-tr%E1%BA%BB-da-tr%E1%BA%AFng-%C4%91eo-k%C3%ADnh-vi%E1%BA%BFt-m%C3%A3-ch%C6%B0%C6%A1ng-tr%C3%ACnh-tr%C3%AAn-m%C3%A1y-t%C3%ADnh-x%C3%A1ch-tay.jpg?b=1&s=612x612&w=0&k=20&c=4PSIhf790mm6SZ3o-froWsYyRMwliXrCwHiiKCDLjN8="
+                alt="gallery" class="block object-cover object-center w-full h-auto rounded-lg">
             </div>
           </div>
           <div class="flex flex-wrap w-1/3">
             <div class="w-full p-1">
-                <img src="https://media.istockphoto.com/id/939787416/vi/anh/hai-n%E1%BB%AF-l%E1%BA%ADp-tr%C3%ACnh-vi%C3%AAn-l%C3%A0m-vi%E1%BB%87c-trong-d%E1%BB%B1-%C3%A1n-m%E1%BB%9Bi-h%E1%BB%8D-l%C3%A0m-vi%E1%BB%87c-v%C3%A0o-ban-%C4%91%C3%AAm-t%E1%BA%A1i-v%C4%83n-ph%C3%B2ng.jpg?s=2048x2048&w=is&k=20&c=uhX3R5BlTNC8yWPD4Za5GrE6fJTsUnRMqoa770EL1kE=" alt="gallery" class="block object-cover object-center w-full h-auto rounded-lg">
+              <img
+                src="https://media.istockphoto.com/id/939787416/vi/anh/hai-n%E1%BB%AF-l%E1%BA%ADp-tr%C3%ACnh-vi%C3%AAn-l%C3%A0m-vi%E1%BB%87c-trong-d%E1%BB%B1-%C3%A1n-m%E1%BB%9Bi-h%E1%BB%8D-l%C3%A0m-vi%E1%BB%87c-v%C3%A0o-ban-%C4%91%C3%AAm-t%E1%BA%A1i-v%C4%83n-ph%C3%B2ng.jpg?s=2048x2048&w=is&k=20&c=uhX3R5BlTNC8yWPD4Za5GrE6fJTsUnRMqoa770EL1kE="
+                alt="gallery" class="block object-cover object-center w-full h-auto rounded-lg">
             </div>
           </div>
           <div class="flex flex-wrap w-1/3">
             <div class="w-full p-1">
-      <img src="https://media.istockphoto.com/id/1047259374/vi/anh/n%E1%BB%81n-tr%E1%BB%ABu-t%C6%B0%E1%BB%A3ng-m%C3%A3-ngu%E1%BB%93n-l%E1%BA%ADp-tr%C3%ACnh.jpg?s=2048x2048&w=is&k=20&c=w0mHq4Cdsp965lGRrWdFT-jOW9781alj2A-6XRPgig8=" alt="gallery" class="block object-cover object-center w-full h-auto rounded-lg">
+              <img
+                src="https://media.istockphoto.com/id/1047259374/vi/anh/n%E1%BB%81n-tr%E1%BB%ABu-t%C6%B0%E1%BB%A3ng-m%C3%A3-ngu%E1%BB%93n-l%E1%BA%ADp-tr%C3%ACnh.jpg?s=2048x2048&w=is&k=20&c=w0mHq4Cdsp965lGRrWdFT-jOW9781alj2A-6XRPgig8="
+                alt="gallery" class="block object-cover object-center w-full h-auto rounded-lg">
             </div>
           </div>
           <div class="flex flex-wrap w-1/3">
             <div class="w-full p-1">
-                <img src="https://media.istockphoto.com/id/1075599562/vi/anh/l%E1%BA%ADp-tr%C3%ACnh-vi%C3%AAn-l%C3%A0m-vi%E1%BB%87c-v%E1%BB%9Bi-m%C3%A3-ch%C6%B0%C6%A1ng-tr%C3%ACnh.jpg?s=2048x2048&w=is&k=20&c=FgnU6O5Ch7k4fznw0V_JcF93b46NJ76IyTCBz-HxDbI=" alt="gallery" class="block object-cover object-center w-full h-auto rounded-lg">
+              <img
+                src="https://media.istockphoto.com/id/1075599562/vi/anh/l%E1%BA%ADp-tr%C3%ACnh-vi%C3%AAn-l%C3%A0m-vi%E1%BB%87c-v%E1%BB%9Bi-m%C3%A3-ch%C6%B0%C6%A1ng-tr%C3%ACnh.jpg?s=2048x2048&w=is&k=20&c=FgnU6O5Ch7k4fznw0V_JcF93b46NJ76IyTCBz-HxDbI="
+                alt="gallery" class="block object-cover object-center w-full h-auto rounded-lg">
             </div>
           </div>
         </div>
       </div>
-      </section>
+    </section>
+  </div>
+  <footer class="bg-gray-800 text-center text-white">
+    <div class="px-6 pt-6">
+      <div class="mb-6 flex justify-center">
+        <a type="button"
+          class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white focus:outline-none focus:ring-0"
+          href="">
+          <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" class="mx-auto h-full w-2"
+            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <path fill="currentColor"
+              d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+            </path>
+          </svg>
+        </a>
+        <a type="button"
+          class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white focus:outline-none focus:ring-0"
+          href="">
+          <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="mx-auto h-full w-3"
+            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor"
+              d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+            </path>
+          </svg>
+        </a>
+        <a type="button"
+          class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white focus:outline-none focus:ring-0"
+          href="">
+          <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" class="mx-auto h-full w-3"
+            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
+            <path fill="currentColor"
+              d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z">
+            </path>
+          </svg>
+        </a>
+      </div>
     </div>
-      <footer class="bg-gray-800 text-center text-white">
-        <div class="px-6 pt-6">
-          <div class="mb-6 flex justify-center">
-            <a type="button" class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white focus:outline-none focus:ring-0" href="">
-              <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" class="mx-auto h-full w-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
-              </svg>
-            </a>
-            <a type="button" class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white focus:outline-none focus:ring-0" href="">
-              <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="mx-auto h-full w-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
-              </svg>
-            </a>
-            <a type="button" class="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white focus:outline-none focus:ring-0" href="">
-      <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" class="mx-auto h-full w-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
-                <path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-        <div>
-      
+    <div>
+
       <form action="">
         <div class="grid grid-cols-3 flex gap-4 justify-center items-center mb-4">
-            <div class="ml-auto">
-              <p class="font-bold ">Sign up for our newsletter</p>
-            </div>
-            <div>
-              <input type="text" name="" id="" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded" placeholder="Email address">
-            </div>
-            <div class="flex float-left">
-              <button type="submit" class="inline-block px-6 py-2 border-2 border-white text-white font-medium leading-tight uppercase rounded">Subcribe</button>
-            </div>
+          <div class="ml-auto">
+            <p class="font-bold ">Sign up for our newsletter</p>
+          </div>
+          <div>
+            <input type="text" name="" id=""
+              class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded"
+              placeholder="Email address">
+          </div>
+          <div class="flex float-left">
+            <button type="submit"
+              class="inline-block px-6 py-2 border-2 border-white text-white font-medium leading-tight uppercase rounded">Subcribe</button>
+          </div>
         </div>
       </form>
-      
-        </div>
-        <div class="mx-auto mb-6 w-1/2">
-          <div></div>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt</p>
-        </div>
-        <div class="bg-gray-900 p-4 text-white">© 2023: Copyright <a href="">Tailwind CSS</a></div>
-      </footer>
-      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    </div>
+    <div class="mx-auto mb-6 w-1/2">
+      <div></div>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo
+        enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+        qui ratione voluptatem sequi nesciunt</p>
+    </div>
+    <div class="bg-gray-900 p-4 text-white">© 2023: Copyright <a href="">Tailwind CSS</a></div>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
