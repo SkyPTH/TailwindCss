@@ -18,3 +18,12 @@ toggleMode=(e)=>{
     const selectToggle=document.querySelector('#toggleDark')
     e.name==="moon"? (e.name="sunny",selectToggle.classList.add("dark"),console.log(dark)):(e.name="moon",selectToggle.classList.remove("dark"))
 }
+toEducation =()=>{
+    document.getElementById("Education").scrollIntoView({behavior:"smooth"})
+}
+toSkill =()=>{
+    document.getElementById("Skill").scrollIntoView({behavior:"smooth"})
+}
+toProject =()=>{
+    document.getElementById("Project").scrollIntoView({behavior:"smooth"})
+}

@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="output.css">
-    <script src="portlio.js"></script>
-    <link rel="stylesheet type=" text/css"
-        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <script src="https://kit.fontawesome.com/b3ae11c671.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
@@ -30,13 +27,13 @@
                 <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center">
                     <div class="hidden sm:ml-6 sm:block">
                         <div class="flex space-x-4">
-                            <a href="#" class="bg-gray-200 text-black px-3 py-2 rounded-md text-sm font-medium"
+                            <a href="javascipt:void(0)" class="bg-gray-200 text-black px-3 py-2 rounded-md text-sm font-medium"
                                 aria-current="page">Home</a>
-                            <a href="#"
+                            <a href="javascipt:void(0)" onclick="toEducation()"
                                 class="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Education</a>
-                            <a href="#"
+                            <a href="javascipt:void(0)" onclick="toSkill()"
                                 class="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Skills</a>
-                            <a href="#"
+                            <a href="javascipt:void(0)" onclick="toProject()"
                                 class="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
                         </div>
                     </div>
@@ -59,14 +56,14 @@
             </div>
         </div>
     </nav>
-    <main
+    <main id="Home"
         class="bg-[url('https://images.pexels.com/photos/4709289/pexels-photo-4709289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] h-screen bg-cover bg-no-repeat bg-fixed">
         <div class="container mx-auto flex flex-col items-center py-12 sm:py-24 font-[Montserrat]">
             <header class="w-11/12 sm:w-2/3 lg:flex justify-center items-center flex-col mb-5 sm:mb-10">
                 <h1
                     class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-gray-100 dark:text-white font-black leading-7 md:leading-10">
                     Hi I'm
-                    <span class="text-blue-400">James</span>
+                    <span class="text-blue-400">Hoàng</span>
 
                 </h1>
                 <p class="mt-5 sm:mt-10 lg:w-10/12 text-gray-100 text-center text-sm sm:text-lg font-semibold">A WebDev
@@ -79,7 +76,7 @@
             </div>
         </div>
     </main>
-    <section class="mx-auto container f-f-p px-4 py-24">
+    <section id="Education" class="mx-auto container f-f-p px-4 py-24">
         <h1 class="text-4xl font-black leading-10 text-center text-gray-800">Education</h1>
         <div class="f-f-p">
             <div class="justify-center w-full">
@@ -107,7 +104,7 @@
             </div>
         </div>
     </section>
-    <div class="dark:bg-gray-900 bg-gray-100">
+    <div class="dark:bg-gray-900 bg-gray-100" id="Skill">
         <section class="mx-auto container py-20">
             <div class="flex justify-center items-center flex-col">
                 <div
@@ -198,7 +195,7 @@
             </div>
         </section>
     </div>
-    <div class="lg:px-20 md:px-6 px-4 md:py-12 py-8">
+    <div class="lg:px-20 md:px-6 px-4 md:py-12 py-8" id="Project">
         <h1 class="lg:text-6xl md:text-5xl text-4xl font-black leading-10 text-center text-gray-800 dark:text-white">
             Projects</h1>
         <div class="flex justify-center">
